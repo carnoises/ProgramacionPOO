@@ -33,5 +33,16 @@ namespace ControlDeVentas
             objV.Producto = cobProductos.Text;
             lblPrecio.Text = objV.Producto.ToString();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Esta seguro de salir.?", "Ventas",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

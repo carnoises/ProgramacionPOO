@@ -30,21 +30,21 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cobProductos = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cobProductos = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -79,6 +79,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DATOS DEL CLIENTE";
             // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(6, 36);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(338, 20);
+            this.txtCliente.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -87,13 +94,6 @@
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "CLIENTE";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(6, 36);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(338, 20);
-            this.txtCliente.TabIndex = 1;
             // 
             // label3
             // 
@@ -148,30 +148,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS DE VENTAS";
             // 
-            // txtCantidad
+            // btnRegistrar
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(298, 36);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(92, 20);
-            this.txtCantidad.TabIndex = 1;
+            this.btnRegistrar.Location = new System.Drawing.Point(562, 44);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(109, 23);
+            this.btnRegistrar.TabIndex = 7;
+            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnCancelar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "PRODUCTOS";
+            this.btnCancelar.Location = new System.Drawing.Point(562, 15);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(109, 23);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label6
+            // lblPrecio
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(295, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "CANTIDAD";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(430, 44);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(47, 13);
+            this.lblPrecio.TabIndex = 5;
+            this.lblPrecio.Text = "lblPrecio";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(430, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "PRECIO";
             // 
             // cobProductos
             // 
@@ -188,41 +200,30 @@
             this.cobProductos.TabIndex = 3;
             this.cobProductos.SelectedIndexChanged += new System.EventHandler(this.cobProductos_SelectedIndexChanged);
             // 
-            // label7
+            // label6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(430, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "PRECIO";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(295, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "CANTIDAD";
             // 
-            // lblPrecio
+            // txtCantidad
             // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(430, 44);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(47, 13);
-            this.lblPrecio.TabIndex = 5;
-            this.lblPrecio.Text = "lblPrecio";
+            this.txtCantidad.Location = new System.Drawing.Point(298, 36);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(92, 20);
+            this.txtCantidad.TabIndex = 1;
             // 
-            // btnCancelar
+            // label5
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(562, 15);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(109, 23);
-            this.btnCancelar.TabIndex = 6;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(562, 44);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(109, 23);
-            this.btnRegistrar.TabIndex = 7;
-            this.btnRegistrar.Text = "REGISTRAR";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "PRODUCTOS";
             // 
             // listView1
             // 

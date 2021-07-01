@@ -39,5 +39,9 @@ namespace PromedioDeNotas
             lblCondicion.Text = objP.Condicion();
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
