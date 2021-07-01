@@ -31,7 +31,7 @@ namespace ControlDeVentas
         private void cobProductos_SelectedIndexChanged(object sender, EventArgs e)
         {
             objV.Producto = cobProductos.Text;
-            lblPrecio.Text = objV.Producto.ToString();
+            lblPrecio.Text = objV.AsignarPrecio().ToString("C");
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

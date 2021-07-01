@@ -25,6 +25,7 @@ namespace ControlDeVentas
                 case "Mouse": return 20;
                 case "Monitor": return 550;
                 case "Parlante": return 50;
+                case "Teclado": return 35;
             }
             return 0;
         }
