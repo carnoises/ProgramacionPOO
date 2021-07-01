@@ -91,6 +91,8 @@ namespace ControlDeVentas
             fila.SubItems.Add(objV.CalcularNeto().ToString("C"));
 
             lvRegistrar.Items.Add(fila);
+
+            LimpiarCampos();
         }
     }
 }
