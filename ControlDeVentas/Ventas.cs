@@ -28,5 +28,10 @@ namespace ControlDeVentas
             }
             return 0;
         }
+
+        public double AsignarDescuento()
+        {
+            return 0;
+        }
     }
 }
