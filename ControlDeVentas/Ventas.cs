@@ -9,6 +9,7 @@ namespace ControlDeVentas
     class Ventas
     {
         private string _producto;
+        private int _cantidad;
 
         public string Producto
         {
@@ -16,6 +17,11 @@ namespace ControlDeVentas
             set { _producto = value; }
         }
 
+        public int Cantidad
+        {
+            get { return _cantidad; }
+            set { _cantidad = value; }
+        }
 
         public double AsignarPrecio()
         {
@@ -30,9 +36,23 @@ namespace ControlDeVentas
             return 0;
         }
 
-        public double AsignarDescuento()
+        public double CalcularMontoBruto()
         {
-            return 0;
+            return AsignarPrecio() * Cantidad;
+        }
+
+        public double CalcularDescuento()
+        {
+            double monto = CalcularMontoBruto();
+            if (monto <= 300) return 5 / 100 * monto;
+            else if (monto > 300 && monto <= 500) return 10 / 100 * monto;
+            else if (monto > 500) return 12.5 / 100 * monto;
+            else return 0;
+        }
+
+        public double CalcularNeto()
+        {
+            return CalcularMontoBruto() - CalcularDescuento();
         }
     }
 }

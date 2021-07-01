@@ -15,7 +15,7 @@ namespace ControlDeVentas
     {
         static string[] productos = { "Impresora", "Mouse", "Monitor", "Parlante", "Teclado" };
 
-        ArrayList aProdcutos = new ArrayList(productos);
+        ArrayList aProductos = new ArrayList(productos);
 
         Ventas objV = new Ventas();
 
@@ -70,10 +70,27 @@ namespace ControlDeVentas
 
         private void LlenarProductos()
         {
-            foreach (var p in aProdcutos)
+            foreach (var p in aProductos)
             {
                 cobProductos.Items.Add(p);
             }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            //Calular
+            objV.Cantidad = int.Parse(txtCantidad.Text);
+
+            double montoBruto = objV.CalcularMontoBruto();
+            //Imprimir 
+            ListViewItem fila = new ListViewItem(cobProductos.Text);
+            fila.SubItems.Add(txtCantidad.Text);
+            fila.SubItems.Add(lblPrecio.Text);
+            fila.SubItems.Add(objV.CalcularMontoBruto().ToString("C"));
+            fila.SubItems.Add(objV.CalcularDescuento().ToString("C"));
+            fila.SubItems.Add(objV.CalcularNeto().ToString("C"));
+
+            lvRegistrar.Items.Add(fila);
         }
     }
 }

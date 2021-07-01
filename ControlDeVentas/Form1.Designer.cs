@@ -45,7 +45,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvRegistrar = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -156,6 +156,7 @@
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "REGISTRAR";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnCancelar
             // 
@@ -219,23 +220,23 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "PRODUCTOS";
             // 
-            // listView1
+            // lvRegistrar
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvRegistrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 231);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(719, 258);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvRegistrar.GridLines = true;
+            this.lvRegistrar.HideSelection = false;
+            this.lvRegistrar.Location = new System.Drawing.Point(12, 231);
+            this.lvRegistrar.Name = "lvRegistrar";
+            this.lvRegistrar.Size = new System.Drawing.Size(719, 258);
+            this.lvRegistrar.TabIndex = 6;
+            this.lvRegistrar.UseCompatibleStateImageBehavior = false;
+            this.lvRegistrar.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -293,7 +294,7 @@
             this.ClientSize = new System.Drawing.Size(743, 532);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvRegistrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.lblFecha);
@@ -333,7 +334,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvRegistrar;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
