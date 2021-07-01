@@ -41,7 +41,13 @@ namespace PromedioDeNotas
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            DialogResult r = MessageBox.Show("Esta seguro de salir.?", "Notas",
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (r == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
