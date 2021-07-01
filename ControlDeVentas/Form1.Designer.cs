@@ -188,12 +188,6 @@
             // cobProductos
             // 
             this.cobProductos.FormattingEnabled = true;
-            this.cobProductos.Items.AddRange(new object[] {
-            "Impresora",
-            "Mouse",
-            "Monitor",
-            "Parlante",
-            "Teclado"});
             this.cobProductos.Location = new System.Drawing.Point(6, 36);
             this.cobProductos.Name = "cobProductos";
             this.cobProductos.Size = new System.Drawing.Size(282, 21);

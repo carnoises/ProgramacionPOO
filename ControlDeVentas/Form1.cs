@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace ControlDeVentas
 {
     public partial class Form1 : Form
     {
+        static string[] productos = { "Impresora", "Mouse", "Monitor", "Parlante", "Teclado" };
+
+        ArrayList aProdcutos = new ArrayList(productos);
+
         Ventas objV = new Ventas();
 
         public Form1()
@@ -21,11 +26,10 @@ namespace ControlDeVentas
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblFecha.Text = DateTime.Now.ToShortDateString();
-            lblHora.Text = DateTime.Now.ToShortTimeString();
-            cobProductos.Text = "--Seleccione un producto--";
-            lblPrecio.Text = "0.00";
-            lblTotal.Text = "0.00";
+            MostrarFecha();
+            MostrarHora();
+            LlenarProductos();
+            LimpiarCampos();
         }
 
         private void cobProductos_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +46,33 @@ namespace ControlDeVentas
             if (r == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void MostrarFecha()
+        {
+            lblFecha.Text = DateTime.Now.ToShortDateString();
+        }
+        private void MostrarHora()
+        {
+            lblHora.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void LimpiarCampos()
+        {
+            cobProductos.Text = "--Seleccione un producto--";
+            lblPrecio.Text = "0.00";
+            lblTotal.Text = "0.00";
+            txtCliente.Clear();
+            txtCantidad.Clear();
+            txtCliente.Focus();
+        }
+
+        private void LlenarProductos()
+        {
+            foreach (var p in aProdcutos)
+            {
+                cobProductos.Items.Add(p);
             }
         }
     }
