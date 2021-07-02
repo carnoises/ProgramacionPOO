@@ -13,9 +13,12 @@ namespace ControlDeVentas
 {
     public partial class Form1 : Form
     {
-        static string[] productos = { "Impresora", "Mouse", "Monitor", "Parlante", "Teclado" };
+        static string[] productos = 
+            { "Impresora", "Mouse", "Monitor", "Parlante", "Teclado" };
 
         ArrayList aProductos = new ArrayList(productos);
+
+        double total;
 
         Ventas objV = new Ventas();
 
@@ -29,6 +32,7 @@ namespace ControlDeVentas
             MostrarFecha();
             MostrarHora();
             LlenarProductos();
+            lblTotal.Text = "0.00";
             LimpiarCampos();
         }
 
@@ -62,7 +66,7 @@ namespace ControlDeVentas
         {
             cobProductos.Text = "--Seleccione un producto--";
             lblPrecio.Text = "0.00";
-            lblTotal.Text = "0.00";
+            
             txtCliente.Clear();
             txtCantidad.Clear();
             txtCliente.Focus();
@@ -91,6 +95,9 @@ namespace ControlDeVentas
             fila.SubItems.Add(objV.CalcularNeto().ToString("C"));
 
             lvRegistrar.Items.Add(fila);
+
+            total += objV.CalcularNeto();
+            lblTotal.Text = total.ToString("C");
 
             LimpiarCampos();
         }
