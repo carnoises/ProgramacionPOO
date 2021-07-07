@@ -65,8 +65,7 @@ namespace ControlDeVentas
         private void LimpiarCampos()
         {
             cobProductos.Text = "--Seleccione un producto--";
-            lblPrecio.Text = "0.00";
-            
+            lblPrecio.Text = "0.00";            
             txtCliente.Clear();
             txtCantidad.Clear();
             txtCliente.Focus();
