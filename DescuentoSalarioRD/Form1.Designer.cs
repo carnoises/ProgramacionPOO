@@ -29,6 +29,7 @@ namespace DescuentoSalarioRD
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSalario = new System.Windows.Forms.TextBox();
@@ -65,13 +66,14 @@ namespace DescuentoSalarioRD
             this.txtSeguroSegundo = new System.Windows.Forms.TextBox();
             this.txtSalarioSegundo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.txtSalarioMens = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRetenciones = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.txtNetoMensual = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.txtRetenciones = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtSalarioMens = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.tHora = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,7 +110,7 @@ namespace DescuentoSalarioRD
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(545, 46);
+            this.label5.Location = new System.Drawing.Point(562, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 7;
@@ -118,7 +120,7 @@ namespace DescuentoSalarioRD
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(551, 68);
+            this.label6.Location = new System.Drawing.Point(571, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 8;
@@ -128,7 +130,7 @@ namespace DescuentoSalarioRD
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(607, 46);
+            this.lblFecha.Location = new System.Drawing.Point(632, 46);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(60, 16);
             this.lblFecha.TabIndex = 9;
@@ -138,7 +140,7 @@ namespace DescuentoSalarioRD
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(607, 68);
+            this.lblHora.Location = new System.Drawing.Point(640, 68);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(52, 16);
             this.lblHora.TabIndex = 10;
@@ -156,7 +158,7 @@ namespace DescuentoSalarioRD
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(594, 500);
+            this.btnSalir.Location = new System.Drawing.Point(583, 500);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 23);
             this.btnSalir.TabIndex = 12;
@@ -518,66 +520,10 @@ namespace DescuentoSalarioRD
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Location = new System.Drawing.Point(16, 94);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(682, 400);
+            this.groupBox1.Size = new System.Drawing.Size(676, 400);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(350, 60);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(81, 23);
-            this.btnLimpiar.TabIndex = 50;
-            this.btnLimpiar.Text = "LIMPIAR";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // txtSalarioMens
-            // 
-            this.txtSalarioMens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtSalarioMens.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSalarioMens.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalarioMens.ForeColor = System.Drawing.Color.White;
-            this.txtSalarioMens.Location = new System.Drawing.Point(119, 26);
-            this.txtSalarioMens.Name = "txtSalarioMens";
-            this.txtSalarioMens.ReadOnly = true;
-            this.txtSalarioMens.Size = new System.Drawing.Size(94, 15);
-            this.txtSalarioMens.TabIndex = 50;
-            this.txtSalarioMens.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Salario Mens.";
-            // 
-            // txtRetenciones
-            // 
-            this.txtRetenciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtRetenciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRetenciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRetenciones.ForeColor = System.Drawing.Color.White;
-            this.txtRetenciones.Location = new System.Drawing.Point(320, 26);
-            this.txtRetenciones.Name = "txtRetenciones";
-            this.txtRetenciones.ReadOnly = true;
-            this.txtRetenciones.Size = new System.Drawing.Size(94, 15);
-            this.txtRetenciones.TabIndex = 52;
-            this.txtRetenciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(219, 25);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(95, 16);
-            this.label12.TabIndex = 51;
-            this.label12.Text = "Retenciones";
             // 
             // txtNetoMensual
             // 
@@ -602,11 +548,71 @@ namespace DescuentoSalarioRD
             this.label14.TabIndex = 53;
             this.label14.Text = "Salario Neto Mens.";
             // 
+            // txtRetenciones
+            // 
+            this.txtRetenciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtRetenciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRetenciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRetenciones.ForeColor = System.Drawing.Color.White;
+            this.txtRetenciones.Location = new System.Drawing.Point(320, 26);
+            this.txtRetenciones.Name = "txtRetenciones";
+            this.txtRetenciones.ReadOnly = true;
+            this.txtRetenciones.Size = new System.Drawing.Size(94, 15);
+            this.txtRetenciones.TabIndex = 52;
+            this.txtRetenciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(219, 25);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 16);
+            this.label12.TabIndex = 51;
+            this.label12.Text = "Retenciones";
+            // 
+            // txtSalarioMens
+            // 
+            this.txtSalarioMens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtSalarioMens.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSalarioMens.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalarioMens.ForeColor = System.Drawing.Color.White;
+            this.txtSalarioMens.Location = new System.Drawing.Point(119, 26);
+            this.txtSalarioMens.Name = "txtSalarioMens";
+            this.txtSalarioMens.ReadOnly = true;
+            this.txtSalarioMens.Size = new System.Drawing.Size(94, 15);
+            this.txtSalarioMens.TabIndex = 50;
+            this.txtSalarioMens.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(11, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(103, 16);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Salario Mens.";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(350, 60);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(109, 23);
+            this.btnLimpiar.TabIndex = 50;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // tHora
+            // 
+            this.tHora.Tick += new System.EventHandler(this.tHora_Tick);
+            // 
             // frmDescuentoSalario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 532);
+            this.ClientSize = new System.Drawing.Size(708, 532);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnProcesar);
@@ -669,13 +675,14 @@ namespace DescuentoSalarioRD
         private System.Windows.Forms.TextBox txtSeguroSegundo;
         private System.Windows.Forms.TextBox txtSalarioSegundo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.TextBox txtSalarioMens;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNetoMensual;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtRetenciones;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Timer tHora;
     }
 }
 

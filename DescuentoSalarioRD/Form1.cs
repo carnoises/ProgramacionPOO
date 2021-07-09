@@ -16,19 +16,18 @@ namespace DescuentoSalarioRD
         public frmDescuentoSalario()
         {
             InitializeComponent();
+            tHora.Enabled = true;
         }       
 
         private void frmDescuentoSalario_Load(object sender, EventArgs e)
         {
-            MostrarFecha();
-            MostrarHora();
+            MostrarFecha();           
             LimpiarCampos();
         }       
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-            decimal salario;
-           // txtSalarioMens.Visible = true;
+            decimal salario;           
 
             #region Validar Campos
             //Validar
@@ -50,9 +49,7 @@ namespace DescuentoSalarioRD
             {
                 salario = decimal.Parse(txtSalario.Text);
             }
-            #endregion
-
-           
+            #endregion           
 
             //Objeto de la clase descuento
             Descuentos objD = new Descuentos(salario);
@@ -75,7 +72,12 @@ namespace DescuentoSalarioRD
 
             //Limpiar campo salario
             txtSalario.Clear();
-            
+            txtSalario.Focus();            
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -92,29 +94,24 @@ namespace DescuentoSalarioRD
                 LimpiarCampos();
             }
         }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
+        
+        private void tHora_Tick(object sender, EventArgs e)
         {
-            LimpiarCampos();
+            lblHora.Text = DateTime.Now.ToString("h:mm:ss");
         }
 
         void MostrarFecha()
         {
             lblFecha.Text = DateTime.Now.ToShortDateString();
-        }
-
-        private void MostrarHora()
-        {
-            lblHora.Text = DateTime.Now.ToShortTimeString();
-        }
+        }        
 
         private void LimpiarCampos()
         {
             txtSalario.Clear();
             txtSalarioMens.Clear();
             txtRetenciones.Clear();
-            txtNetoMensual.Clear();
-            //txtSalarioMens.Visible = false;
+            txtNetoMensual.Clear(); 
+            
             txtSalarioPrimera.Text = "0.00";
             txtSeguroPrimero.Text = "0.00";
             txtImpSegundo.Text = "0.00";
@@ -127,6 +124,6 @@ namespace DescuentoSalarioRD
             txtFondoSegundo.Text = "0.00";
             txtNetoSegundo.Text = "0.00";
             txtSalario.Focus();
-        }        
+        }       
     }
 }
