@@ -175,6 +175,7 @@ namespace DescuentoSalarioRD
             this.textBox1.TabIndex = 13;
             this.textBox1.Text = "PRIMERA QUINCENA SIN DESCUENTOS";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 

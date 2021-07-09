@@ -27,6 +27,8 @@ namespace DescuentoSalarioRD
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
+
+          
             decimal salario;           
 
             #region Validar Campos
@@ -49,7 +51,33 @@ namespace DescuentoSalarioRD
             {
                 salario = decimal.Parse(txtSalario.Text);
             }
-            #endregion           
+            #endregion
+
+
+            // ejemplo con interfaces (polimorfismo)
+            //ICalculadorDescuento calculador;
+            //string tipo="";
+
+            //if ( tipo == "vendedor")
+            //    calculador = new CalculadorDescuento();
+            //else 
+               
+            //var calculador = new CalculadorDescuento2();
+
+            // forma #1
+            //var request = new CalculadorDescuentoRequestDto();
+            //request.Salario = salario;
+
+            // forma #1
+            //var request = new CalculadorDescuentoRequestDto 
+            //{ 
+            //    Salario = salario 
+            //};
+
+            //var response = calculador.CalcularDescuentos(request);
+
+
+
 
             //Objeto de la clase descuento
             Descuentos objD = new Descuentos(salario);
@@ -121,6 +149,7 @@ namespace DescuentoSalarioRD
             txtFondoSegundo.Text = "0.00";
             txtNetoSegundo.Text = "0.00";
             txtSalario.Focus();
-        }       
+        }
+        
     }
 }
