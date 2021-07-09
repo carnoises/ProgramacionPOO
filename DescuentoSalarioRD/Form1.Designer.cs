@@ -81,17 +81,17 @@ namespace DescuentoSalarioRD
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(103, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 20);
+            this.label1.Size = new System.Drawing.Size(473, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "DETALLES DE INGRESOS Y DESCUENTOS";
+            this.label1.Text = "DETALLES DE INGRESO Y DESCUENTOS DE SALARIO";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 63);
+            this.label2.Location = new System.Drawing.Point(13, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 1;
@@ -100,7 +100,7 @@ namespace DescuentoSalarioRD
             // txtSalario
             // 
             this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.Location = new System.Drawing.Point(122, 62);
+            this.txtSalario.Location = new System.Drawing.Point(122, 57);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(107, 22);
             this.txtSalario.TabIndex = 2;
@@ -110,7 +110,7 @@ namespace DescuentoSalarioRD
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(562, 46);
+            this.label5.Location = new System.Drawing.Point(562, 41);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 7;
@@ -120,7 +120,7 @@ namespace DescuentoSalarioRD
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(571, 68);
+            this.label6.Location = new System.Drawing.Point(571, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 8;
@@ -130,7 +130,7 @@ namespace DescuentoSalarioRD
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(632, 46);
+            this.lblFecha.Location = new System.Drawing.Point(632, 41);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(60, 16);
             this.lblFecha.TabIndex = 9;
@@ -140,7 +140,7 @@ namespace DescuentoSalarioRD
             // 
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(640, 68);
+            this.lblHora.Location = new System.Drawing.Point(640, 63);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(52, 16);
             this.lblHora.TabIndex = 10;
@@ -148,7 +148,7 @@ namespace DescuentoSalarioRD
             // 
             // btnProcesar
             // 
-            this.btnProcesar.Location = new System.Drawing.Point(235, 61);
+            this.btnProcesar.Location = new System.Drawing.Point(235, 56);
             this.btnProcesar.Name = "btnProcesar";
             this.btnProcesar.Size = new System.Drawing.Size(109, 23);
             this.btnProcesar.TabIndex = 11;
@@ -158,7 +158,7 @@ namespace DescuentoSalarioRD
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(583, 500);
+            this.btnSalir.Location = new System.Drawing.Point(583, 495);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 23);
             this.btnSalir.TabIndex = 12;
@@ -518,7 +518,7 @@ namespace DescuentoSalarioRD
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Location = new System.Drawing.Point(16, 94);
+            this.groupBox1.Location = new System.Drawing.Point(16, 89);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(676, 400);
             this.groupBox1.TabIndex = 49;
@@ -596,7 +596,7 @@ namespace DescuentoSalarioRD
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(350, 60);
+            this.btnLimpiar.Location = new System.Drawing.Point(350, 55);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(109, 23);
             this.btnLimpiar.TabIndex = 50;
@@ -612,7 +612,7 @@ namespace DescuentoSalarioRD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 532);
+            this.ClientSize = new System.Drawing.Size(708, 524);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnProcesar);
