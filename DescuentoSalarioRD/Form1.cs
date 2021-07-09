@@ -64,11 +64,11 @@ namespace DescuentoSalarioRD
             txtNetoPrimero.Text = objD.PrimeraQuincena().ToString("N2");
 
             //Impimir datos Segunsa Quincena
-            txtSalarioSegundo.Text = objD.PrimeraQuincena().ToString("N2");
+            txtSalarioSegundo.Text = objD.SegundaQuincena().ToString("N2");
             txtSeguroSegundo.Text = "-" + objD.CalculaSeguroSalud().ToString("N2");
             txtImpSegundo.Text = "-" + objD.CalculaISR().ToString("N2");
             txtFondoSegundo.Text = "-" + objD.CalculaFondoPensiones().ToString("N2");
-            txtNetoSegundo.Text = objD.SegundaQuincena().ToString("N2");
+            txtNetoSegundo.Text = objD.SegundaQuincenaRetenciones().ToString("N2");
 
             //Limpiar campo salario
             txtSalario.Clear();
