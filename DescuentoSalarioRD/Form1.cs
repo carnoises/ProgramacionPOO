@@ -112,10 +112,7 @@ namespace DescuentoSalarioRD
             txtRetenciones.Clear();
             txtNetoMensual.Clear(); 
             
-            txtSalarioPrimera.Text = "0.00";
-            txtSeguroPrimero.Text = "0.00";
-            txtImpSegundo.Text = "0.00";
-            txtFondoPrimero.Text = "0.00";
+            txtSalarioPrimera.Text = "0.00"; 
             txtNetoPrimero.Text = "0.00";
 
             txtSalarioSegundo.Text = "0.00";
