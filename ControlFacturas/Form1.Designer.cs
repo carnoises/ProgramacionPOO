@@ -186,7 +186,7 @@ namespace ControlFacturas
             // columnHeader1
             // 
             this.columnHeader1.Text = "NUM. FACTURA";
-            this.columnHeader1.Width = 145;
+            this.columnHeader1.Width = 141;
             // 
             // columnHeader2
             // 
