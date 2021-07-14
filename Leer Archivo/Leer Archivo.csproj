@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DescuentoSalarioRD\DescuentoSalarioRD.csproj">
+      <Project>{e46afc5e-5a85-419c-8441-3eaccba1a94c}</Project>
+      <Name>DescuentoSalarioRD</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
