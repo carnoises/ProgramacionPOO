@@ -14,7 +14,7 @@ namespace Leer_Archivo
         static void Main(string[] args)
         {
             /*
-             *  El archivo debe tener la siguiente estructura
+             *  El archivo debe tener la siguiente estructura con extension txt
              *  
                 codigo, nombre, Puesto, Departamento, sueldo
                 001,Jose Perez,Presidente,Presidencia,250000.00
@@ -65,7 +65,6 @@ namespace Leer_Archivo
 
                 foreach (var item in lineasArchivo)
                 {
-
                     var campoLineas = item.Split(',');
                     objD = new Descuentos(decimal.Parse(campoLineas[4]));
                     archivo.Write(campoLineas[0].PadRight(9));                                  //Codigo
@@ -105,7 +104,8 @@ namespace Leer_Archivo
                 archivo.Write("=============".PadRight(14));    // ISR
                 archivo.Write("=============".PadRight(14));    // Seguro
                 archivo.Write("=============");      // Neto
-            }
+            }           
+           
             //Console.ReadKey();
         }
     }
