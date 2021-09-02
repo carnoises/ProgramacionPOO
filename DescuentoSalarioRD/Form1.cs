@@ -1,12 +1,5 @@
 ﻿using Microsoft.VisualBasic;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DescuentoSalarioRD
@@ -27,8 +20,6 @@ namespace DescuentoSalarioRD
 
         private void btnProcesar_Click(object sender, EventArgs e)
         {
-
-          
             decimal salario;           
 
             #region Validar Campos
@@ -52,32 +43,6 @@ namespace DescuentoSalarioRD
                 salario = decimal.Parse(txtSalario.Text);
             }
             #endregion
-
-
-            // ejemplo con interfaces (polimorfismo)
-            //ICalculadorDescuento calculador;
-            //string tipo="";
-
-            //if ( tipo == "vendedor")
-            //    calculador = new CalculadorDescuento();
-            //else 
-               
-            //var calculador = new CalculadorDescuento2();
-
-            // forma #1
-            //var request = new CalculadorDescuentoRequestDto();
-            //request.Salario = salario;
-
-            // forma #1
-            //var request = new CalculadorDescuentoRequestDto 
-            //{ 
-            //    Salario = salario 
-            //};
-
-            //var response = calculador.CalcularDescuentos(request);
-
-
-
 
             //Objeto de la clase descuento
             Descuentos objD = new Descuentos(salario);
