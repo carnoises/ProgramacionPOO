@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{73FFD0A5-5408-46E3-8C6C-A2EE330BA13B}</ProjectGuid>
+    <ProjectGuid>{7475209D-1D99-4FDF-A552-854367DB1556}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EquiposTecnologicos</RootNamespace>
-    <AssemblyName>EquiposTecnologicos</AssemblyName>
+    <RootNamespace>Equipos</RootNamespace>
+    <AssemblyName>Equipos</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TipoDeEquipo.cs" />
+    <Compile Include="TipoEquipos.cs" />
     <EmbeddedResource Include="frmEquipos.resx">
       <DependentUpon>frmEquipos.cs</DependentUpon>
     </EmbeddedResource>
