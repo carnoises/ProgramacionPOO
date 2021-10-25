@@ -50,7 +50,7 @@ namespace ArrayList_RegistroPersonal
                 lblCodigo.Text = generarCodigo();
                     
             }
-            catch (Exception)
+            catch (Exception m)
             {
 
                 MessageBox.Show("Ocurrio un error al registrar.");
@@ -59,12 +59,29 @@ namespace ArrayList_RegistroPersonal
 
         private void limpiarControles()
         {
-            throw new NotImplementedException();
+            txtPaterno.Clear();
+            txtMaterno.Clear();
+            txtNombres.Clear();
+            txtFechaNac.Clear();
+            txtFechaCont.Clear();
+            txtPaterno.Focus();
         }
 
         private void listado()
         {
-            throw new NotImplementedException();
+           lvListado.Items.Clear();
+            foreach (Personal p in aPersonal)
+            {
+                ListViewItem fila = new ListViewItem(p.Codigo);
+                fila.SubItems.Add(p.Paterno);
+                fila.SubItems.Add(p.Materno);
+                fila.SubItems.Add(p.Nombres);
+                fila.SubItems.Add(p.FechaNacimiento.ToString());
+                fila.SubItems.Add(p.FechaContrato.ToString());
+
+                lvListado.Items.Add(fila);
+
+            }
         }
 
         private string generarCodigo()
@@ -82,6 +99,69 @@ namespace ArrayList_RegistroPersonal
                 }
             }
             return "P" + (int.Parse(cod.Substring(1, 3)) + 1).ToString("000");
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Personal p in aPersonal)
+                {
+                    if (p.Codigo == lblCodigo.Text)
+                    {
+                        p.Paterno = txtPaterno.Text;
+                        p.Materno = txtMaterno.Text;
+                        p.Nombres = txtNombres.Text;
+                        p.FechaNacimiento = DateTime.Parse(txtFechaNac.Text);
+                        p.FechaContrato = DateTime.Parse(txtFechaCont.Text);
+                        break;
+                    }
+                }
+                listado();
+                generarCodigo();
+                limpiarControles();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ocurrio un error modificando");
+            }
+        }
+
+        private void lvListado_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewItem elemento = lvListado.GetItemAt(e.X, e.Y);
+
+            if (elemento != null)
+            {
+                lblCodigo.Text = elemento.Text;
+                txtPaterno.Text = elemento.SubItems[1].Text;
+                txtMaterno.Text = elemento.SubItems[2].Text;
+                txtNombres.Text = elemento.SubItems[3].Text;
+                txtFechaNac.Text = elemento.SubItems[4].Text;
+                txtFechaCont.Text = elemento.SubItems[5].Text;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (Personal p in aPersonal)
+                {
+                    if (p.Codigo == lblCodigo.Text)
+                    {
+                        aPersonal.Remove(p);
+                        break;
+                    }
+                }
+                listado();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ocurrio un error elimiando");
+            }
         }
     }
 }

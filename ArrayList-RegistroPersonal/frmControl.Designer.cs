@@ -47,7 +47,7 @@ namespace ArrayList_RegistroPersonal
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvListado = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -196,6 +196,7 @@ namespace ArrayList_RegistroPersonal
             this.btnModificar.TabIndex = 15;
             this.btnModificar.Text = "MODIFICAR";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -205,6 +206,7 @@ namespace ArrayList_RegistroPersonal
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnSalir
             // 
@@ -215,23 +217,24 @@ namespace ArrayList_RegistroPersonal
             this.btnSalir.Text = "SALIR";
             this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lvListado
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvListado.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 193);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 245);
-            this.listView1.TabIndex = 18;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvListado.GridLines = true;
+            this.lvListado.HideSelection = false;
+            this.lvListado.Location = new System.Drawing.Point(12, 193);
+            this.lvListado.Name = "lvListado";
+            this.lvListado.Size = new System.Drawing.Size(776, 245);
+            this.lvListado.TabIndex = 18;
+            this.lvListado.UseCompatibleStateImageBehavior = false;
+            this.lvListado.View = System.Windows.Forms.View.Details;
+            this.lvListado.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lvListado_MouseDoubleClick);
             // 
             // columnHeader1
             // 
@@ -268,7 +271,7 @@ namespace ArrayList_RegistroPersonal
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvListado);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -316,7 +319,7 @@ namespace ArrayList_RegistroPersonal
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvListado;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
